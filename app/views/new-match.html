@@ -1,0 +1,36 @@
+
+<h2>New Match, let's get it on!</h2>
+
+
+<form name="newMatchForm" novalidate role="form">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-group">
+				<label for="newMatchPlayerOne">Select first player</label>
+				<select ng-model="playerOne" ng-options="player.name for player in players" ng-change="addParticipation('playerOne')" required name="newMatchPlayerOne">
+					<option value="">Choose a player</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+				<label for="newMatchPlayerTwo">Select second player</label>
+				<select ng-model="playerTwo" ng-options="player.name for player in players" ng-change="addParticipation('playerTwo')" required name="newMatchPlayerTwo">
+					<option value="">Choose a player</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="form-group">
+				<label for="newMatchPlayerWinner">Select a winner</label>
+				<select ng-model="winner" ng-options="player.name for player in chosenPlayers" required name="newMatchPlayerTwo">
+					<option value="">Choose a player</option>
+				</select>
+			</div>
+		</div>
+
+		<button ng-disabled="newMatchForm.$invalid || newMatchForm.$pristine" ng-click="assignNewPoints()">Complete Match</button>
+	</div>
+</form>
