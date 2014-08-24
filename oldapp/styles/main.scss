@@ -1,0 +1,126 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+// endbower
+
+$navy-blue: #2f3448;
+$montserrat: 'Montserrat', sans-serif;
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header-info {
+  padding: 2em 0;
+  text-align: center;
+  background: $brand-warning;
+  background-image: -webkit-gradient(linear,left top,left bottom,from($navy-blue),to(darken( $navy-blue, 10% )));
+  background-image: -webkit-linear-gradient(top,$navy-blue 0,darken( $navy-blue, 10% ) 100%);
+  background-image: -o-linear-gradient(top,$navy-blue 0,darken( $navy-blue, 10% ) 100%);
+  background-image: linear-gradient(to bottom,$navy-blue 0, darken( $navy-blue, 5% ) 100%);
+  background-repeat: repeat-x;
+}
+
+
+.logo {
+  max-width: 50%;
+}
+
+.header-info-title {
+  color: #fff;
+  font-family: $montserrat;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.primary-nav {
+  padding: 1em 0;
+  background: rgba(192, 192, 192, 0.5);
+}
+
+
+.app-content {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/* Custom page footer */
+.footer {
+  margin-top: 2em;
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  .header-info {
+    text-align: left;
+  }
+
+  .logo {
+    max-width: 12%;
+    float: left;
+    margin-right: 2em;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

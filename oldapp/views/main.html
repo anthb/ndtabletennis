@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-12">
+      <h2>Live Rankings</h2>
+      <p>The competition is fierce! The rankings are in and here are the standings.</p>
+
+      <table class="table">
+        <thead>
+          <tr class="active">
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="player in players | orderBy:points:reverse">
+            <td>{{$index + 1}}</td>
+            <td>{{player.name}}</td>
+            <td>{{player.points}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The points are <a href="http://en.wikipedia.org/wiki/World_Football_Elo_Ratings#Basic_calculation_principles" target="_blank">calculated based on the ELO rating system</a>. This uses a very basic version of the system, there is no modification based on the margin of the victory, only win / loss. There is also no decay based on activity (at this stage).</p>
+  </div>
+</div>
